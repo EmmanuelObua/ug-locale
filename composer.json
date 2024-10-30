@@ -1,0 +1,25 @@
+{
+	"name": "intanode/ug-locale",
+	"description": "Package for managing Ugandan administrative hierarchy.",
+	"type": "library",
+	"license": "MIT",
+	"autoload": {
+		"psr-4": {
+			"Intanode\\UgLocale\\": "src/"
+		}
+	},
+	"authors": [
+		{
+			"name": "Emmanuel Obua",
+			"email": "obuaemmanuel10@gmail.com"
+		}
+	],
+	"require": {},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Intanode\\UgLocale\\Providers\\UgLocaleServiceProvider"
+			]
+		}
+	}
+}
