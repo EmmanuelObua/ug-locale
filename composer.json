@@ -14,7 +14,15 @@
 			"email": "obuaemmanuel10@gmail.com"
 		}
 	],
-	"require": {},
+	"require": {
+		"php": "^8.1|^8.2", 
+		"illuminate/support": "^10.0",
+		"illuminate/database": "^10.0"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^10.0",
+		"orchestra/testbench": "^8.0" 
+	},
 	"extra": {
 		"laravel": {
 			"providers": [
