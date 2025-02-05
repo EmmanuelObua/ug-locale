@@ -6,17 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    public function up()
-    {
-        Schema::create('districts', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->timestamps();
-        });
-    }
+	public function up()
+	{
+		Schema::create('districts', function (Blueprint $table) {
+			$table->id();
+			$table->string('name');
+			$table->unsignedInteger('region_id')->nullable();
+			$table->timestamps();
+		});
+	}
 
-    public function down()
-    {
-        Schema::dropIfExists('districts');
-    }
+	public function down()
+	{
+		Schema::dropIfExists('districts');
+	}
 };
