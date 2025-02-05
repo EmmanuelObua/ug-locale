@@ -89,52 +89,52 @@ Once installed, the package provides the following routes to interact with the l
 GET Routes
 
 ```
-	GET /ug-locale/regions
-	Returns all regions.
+GET /ug-locale/regions
+Returns all regions.
 
-	GET /ug-locale/districts?region_id={region_id}
-	Returns all districts within a specified region.
+GET /ug-locale/districts?region_id={region_id}
+Returns all districts within a specified region.
 
-	GET /ug-locale/counties?district_id={district_id}
-	Returns all counties within a specified district.
+GET /ug-locale/counties?district_id={district_id}
+Returns all counties within a specified district.
 
-	GET /ug-locale/sub-counties?county_id={county_id}
-	Returns all sub-counties within a specified county.
+GET /ug-locale/sub-counties?county_id={county_id}
+Returns all sub-counties within a specified county.
 
-	GET /ug-locale/parishes?sub_county_id={sub_county_id}
-	Returns all parishes within a specified sub-county.
+GET /ug-locale/parishes?sub_county_id={sub_county_id}
+Returns all parishes within a specified sub-county.
 
-	GET /ug-locale/villages?parish_id={parish_id}
-	Returns all villages within a specified parish.
+GET /ug-locale/villages?parish_id={parish_id}
+Returns all villages within a specified parish.
 ```
 
 
 POST Routes
 
 ```
-	POST /ug-locale/regions
-	Creates a new region if it does not exist.
-	Payload: { "name": "Region Name" }
+POST /ug-locale/regions
+Creates a new region if it does not exist.
+Payload: { "name": "Region Name" }
 
-	POST /ug-locale/districts
-	Creates a new district if it does not exist.
-	Payload: { "name": "District Name", "region_id": 1 }
+POST /ug-locale/districts
+Creates a new district if it does not exist.
+Payload: { "name": "District Name", "region_id": 1 }
 
-	POST /ug-locale/counties
-	Creates a new county if it does not exist.
-	Payload: { "name": "County Name", "district_id": 1 }
+POST /ug-locale/counties
+Creates a new county if it does not exist.
+Payload: { "name": "County Name", "district_id": 1 }
 
-	POST /ug-locale/sub-counties
-	Creates a new sub-county if it does not exist.
-	Payload: { "name": "Sub-County Name", "county_id": 1 }
+POST /ug-locale/sub-counties
+Creates a new sub-county if it does not exist.
+Payload: { "name": "Sub-County Name", "county_id": 1 }
 
-	POST /ug-locale/parishes
-	Creates a new parish if it does not exist.
-	Payload: { "name": "Parish Name", "sub_county_id": 1 }
+POST /ug-locale/parishes
+Creates a new parish if it does not exist.
+Payload: { "name": "Parish Name", "sub_county_id": 1 }
 
-	POST /ug-locale/villages
-	Creates a new village if it does not exist.
-	Payload: { "name": "Village Name", "parish_id": 1 }
+POST /ug-locale/villages
+Creates a new village if it does not exist.
+Payload: { "name": "Village Name", "parish_id": 1 }
 ```
 
 ## Additional Documentation
@@ -157,4 +157,4 @@ The Artisan command locale:install will automatically run your migrations and se
 
 This package is open-sourced software licensed under the MIT license.
 
-# With these instructions, your Laravel application is now ready to manage Ugandan location data using the UG Locale package. Enjoy seamless integration and extended locale functionality!
+With these instructions, your Laravel application is now ready to manage Ugandan location data using the UG Locale package. Enjoy seamless integration and extended locale functionality!

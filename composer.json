@@ -1,6 +1,6 @@
 {
 	"name": "intanode/ug-locale",
-	"description": "Package for managing Ugandan administrative hierarchy.",
+	"description": "A package that provides a comprehensive set of resources to manage Ugandan location data (regions, districts, counties, sub-counties, parishes, and villages). This package includes configuration options, database migrations, and routes for a fully featured locale management system.",
 	"type": "library",
 	"license": "MIT",
 	"autoload": {
