@@ -89,7 +89,7 @@ Route::prefix('ug-locale')->group(function () {
     *
     * @return \Illuminate\Http\JsonResponse
     */
-   Route::post('/regions', [LocationController::class, 'addRegion'])
+   Route::post('/regions', [UgLocaleController::class, 'addRegion'])
    		->name('locations.add_region');
 
    /**
@@ -102,7 +102,7 @@ Route::prefix('ug-locale')->group(function () {
     *
     * @return \Illuminate\Http\JsonResponse
     */
-   Route::post('/districts', [LocationController::class, 'addDistrict'])
+   Route::post('/districts', [UgLocaleController::class, 'addDistrict'])
    		->name('locations.add_district');
 
    /**
@@ -115,7 +115,7 @@ Route::prefix('ug-locale')->group(function () {
     *
     * @return \Illuminate\Http\JsonResponse
     */
-   Route::post('/counties', [LocationController::class, 'addCounty'])
+   Route::post('/counties', [UgLocaleController::class, 'addCounty'])
    		->name('locations.add_county');
 
    /**
@@ -128,7 +128,7 @@ Route::prefix('ug-locale')->group(function () {
     *
     * @return \Illuminate\Http\JsonResponse
     */
-   Route::post('/sub-counties', [LocationController::class, 'addSubCounty'])
+   Route::post('/sub-counties', [UgLocaleController::class, 'addSubCounty'])
    		->name('locations.add_sub_county');
 
    /**
@@ -141,7 +141,7 @@ Route::prefix('ug-locale')->group(function () {
     *
     * @return \Illuminate\Http\JsonResponse
     */
-   Route::post('/parishes', [LocationController::class, 'addParish'])
+   Route::post('/parishes', [UgLocaleController::class, 'addParish'])
    		->name('locations.add_parish');
 
    /**
@@ -154,6 +154,6 @@ Route::prefix('ug-locale')->group(function () {
     *
     * @return \Illuminate\Http\JsonResponse
     */
-   Route::post('/villages', [LocationController::class, 'addVillage'])
+   Route::post('/villages', [UgLocaleController::class, 'addVillage'])
    		->name('locations.add_village');
 });

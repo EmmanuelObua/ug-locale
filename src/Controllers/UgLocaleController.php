@@ -134,11 +134,6 @@ class UgLocaleController extends Controller
         ]);
     }
 
-
-    // ============================================================
-    // "Add" Endpoints for Creating New Location Records
-    // ============================================================
-
     /**
      * Add a new region if it doesn't exist.
      *
