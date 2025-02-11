@@ -118,7 +118,7 @@ class TransformAndSeedLocale extends Command
 			$table = (new $modelClass)->getTable();
 
 			if ($driver === 'sqlsrv') {
-			    DB::statement("SET IDENTITY_INSERT {$table} ON");
+			    DB::unprepared("SET IDENTITY_INSERT {$table} ON");
 			}
 
 
@@ -142,7 +142,7 @@ class TransformAndSeedLocale extends Command
 			}
 
 			if ($driver === 'sqlsrv') {
-			    DB::statement("SET IDENTITY_INSERT {$table} OFF");
+			    DB::unprepared("SET IDENTITY_INSERT {$table} OFF");
 			}
 
 		});
