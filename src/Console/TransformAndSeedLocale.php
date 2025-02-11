@@ -122,6 +122,7 @@ class TransformAndSeedLocale extends Command
 			}
 
 			$batchSize = floor(2100/ $totalRecords);
+			
 
 			if ($batchSize) {
 				$chunks = array_chunk($data, $batchSize);
