@@ -6,6 +6,7 @@ use Illuminate\Console\Command;
 use Intanode\UgLocale\Services\LocaleService;
 use Intanode\UgLocale\Models\{District, County, SubCounty, Parish, Village, Region};
 use Illuminate\Support\Facades\{Artisan, DB, Schema, Log};
+use Illuminate\Support\Facades\Schema;
 
 class TransformAndSeedLocale extends Command
 {
@@ -112,6 +113,16 @@ class TransformAndSeedLocale extends Command
 		$this->info("📊 Total $name records: $totalRecords");
 
 		DB::transaction(function () use ($modelClass, $data, $batchSize, $name, $totalRecords) {
+
+			$driver = Schema::getConnection()->getDriverName();
+
+			$table = (new $modelClass)->getTable();
+
+			if ($driver === 'sqlsrv') {
+			    DB::statement("SET IDENTITY_INSERT {$table} ON");
+			}
+
+
 			if ($batchSize) {
 				$chunks = array_chunk($data, $batchSize);
 				$this->output->progressStart(count($chunks));
@@ -130,6 +141,11 @@ class TransformAndSeedLocale extends Command
 				}
 				$this->output->progressFinish();
 			}
+
+			if ($driver === 'sqlsrv') {
+			    DB::statement("SET IDENTITY_INSERT {$table} OFF");
+			}
+
 		});
 
 		$this->info("✅ $name have been successfully seeded!");
