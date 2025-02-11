@@ -91,8 +91,8 @@ class LocaleService
 			'id' => (int) $village['id'],
 			'name' => ucwords(strtolower($village['name'])),
 			'parish_id' => (int) $village['parish'],
-			'created_at' => Carbon::now(),
-			'updated_at' => Carbon::now(),
+			// 'created_at' => Carbon::now(),
+			// 'updated_at' => Carbon::now(),
 		]);
 	}
 

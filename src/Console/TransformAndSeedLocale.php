@@ -121,6 +121,7 @@ class TransformAndSeedLocale extends Command
 			    DB::unprepared("SET IDENTITY_INSERT {$table} ON");
 			}
 
+			$batchSize = floor(2100/ $totalRecords);
 
 			if ($batchSize) {
 				$chunks = array_chunk($data, $batchSize);
