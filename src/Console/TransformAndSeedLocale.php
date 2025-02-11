@@ -6,7 +6,6 @@ use Illuminate\Console\Command;
 use Intanode\UgLocale\Services\LocaleService;
 use Intanode\UgLocale\Models\{District, County, SubCounty, Parish, Village, Region};
 use Illuminate\Support\Facades\{Artisan, DB, Schema, Log};
-use Illuminate\Support\Facades\Schema;
 
 class TransformAndSeedLocale extends Command
 {
